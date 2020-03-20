@@ -46,5 +46,10 @@ namespace _291CourseProject
         {
 
         }
+
+        private void listBox01_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
