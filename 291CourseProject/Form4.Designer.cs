@@ -1,6 +1,6 @@
 ﻿namespace _291CourseProject
 {
-    partial class Form3
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.vehicles_matching_search = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +42,7 @@
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(226, 44);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 15;
             this.label1.Text = "CMB Rentals";
             // 
             // button2
@@ -51,30 +51,30 @@
             this.button2.Location = new System.Drawing.Point(12, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 25);
-            this.button2.TabIndex = 17;
+            this.button2.TabIndex = 18;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // vehicles_matching_search
+            // label3
             // 
-            this.vehicles_matching_search.FormattingEnabled = true;
-            this.vehicles_matching_search.Location = new System.Drawing.Point(12, 148);
-            this.vehicles_matching_search.Name = "vehicles_matching_search";
-            this.vehicles_matching_search.Size = new System.Drawing.Size(453, 303);
-            this.vehicles_matching_search.TabIndex = 18;
-            this.vehicles_matching_search.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(12, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Vehicle chosen: ____________";
             // 
-            // Form3
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 611);
-            this.Controls.Add(this.vehicles_matching_search);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
-            this.Text = "Select a Vehicle";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Name = "Form4";
+            this.Text = "Vehicle Specs";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,6 +84,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox vehicles_matching_search;
+        private System.Windows.Forms.Label label3;
     }
 }
