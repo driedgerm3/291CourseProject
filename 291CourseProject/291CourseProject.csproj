@@ -46,6 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_car.Designer.cs">
+      <DependentUpon>add_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_customer.Designer.cs">
+      <DependentUpon>add_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_employee.Designer.cs">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_cars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_cars.Designer.cs">
+      <DependentUpon>ad_cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_customers.Designer.cs">
+      <DependentUpon>ad_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ad_employees.Designer.cs">
+      <DependentUpon>ad_employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +126,30 @@
     <Compile Include="report_generator.Designer.cs">
       <DependentUpon>report_generator.cs</DependentUpon>
     </Compile>
+    <Compile Include="vp_transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vp_transactions.Designer.cs">
+      <DependentUpon>vp_transactions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_car.resx">
+      <DependentUpon>add_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_customer.resx">
+      <DependentUpon>add_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_employee.resx">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_cars.resx">
+      <DependentUpon>ad_cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_customers.resx">
+      <DependentUpon>ad_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_employees.resx">
+      <DependentUpon>ad_employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="report_generator.resx">
       <DependentUpon>report_generator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vp_transactions.resx">
+      <DependentUpon>vp_transactions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
