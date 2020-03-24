@@ -42,9 +42,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Cambria", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 44);
+            this.label1.Size = new System.Drawing.Size(283, 55);
             this.label1.TabIndex = 14;
             this.label1.Text = "CMB Rentals";
             // 
@@ -52,28 +53,32 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(12, 112);
+            this.label2.Location = new System.Drawing.Point(16, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 20);
+            this.label2.Size = new System.Drawing.Size(259, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Please select a mode below.";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(16, 193);
+            this.button1.Location = new System.Drawing.Point(21, 238);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
+            this.button1.Size = new System.Drawing.Size(133, 62);
             this.button1.TabIndex = 16;
             this.button1.Text = "Customer";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(16, 307);
+            this.button2.Location = new System.Drawing.Point(21, 378);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 50);
+            this.button2.Size = new System.Drawing.Size(133, 62);
             this.button2.TabIndex = 17;
             this.button2.Text = "Employee";
             this.button2.UseVisualStyleBackColor = true;
@@ -83,9 +88,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(149, 193);
+            this.label3.Location = new System.Drawing.Point(199, 238);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 20);
+            this.label3.Size = new System.Drawing.Size(284, 25);
             this.label3.TabIndex = 18;
             this.label3.Text = "Place an order to rent a vehicle.";
             // 
@@ -93,23 +99,25 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(149, 307);
+            this.label4.Location = new System.Drawing.Point(199, 378);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(405, 20);
+            this.label4.Size = new System.Drawing.Size(499, 25);
             this.label4.TabIndex = 19;
             this.label4.Text = "View transactions, branches, employees and customers.";
             // 
             // ModeSelector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 611);
+            this.ClientSize = new System.Drawing.Size(1112, 752);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModeSelector";
             this.Text = "Select a Mode";
             this.Load += new System.EventHandler(this.ModeSelector_Load);

@@ -1,6 +1,6 @@
 ﻿namespace _291CourseProject
 {
-    partial class ad_cars
+    partial class CarAddDelete
     {
         /// <summary>
         /// Required designer variable.
@@ -42,12 +42,14 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(12, 56);
+            this.button2.Location = new System.Drawing.Point(16, 69);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 25);
+            this.button2.Size = new System.Drawing.Size(107, 31);
             this.button2.TabIndex = 20;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -55,9 +57,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Cambria", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 44);
+            this.label1.Size = new System.Drawing.Size(283, 55);
             this.label1.TabIndex = 19;
             this.label1.Text = "CMB Rentals";
             // 
@@ -65,9 +68,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(19, 169);
+            this.label2.Location = new System.Drawing.Point(25, 208);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(90, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Branch 1";
             // 
@@ -75,9 +79,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(501, 169);
+            this.label3.Location = new System.Drawing.Point(668, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(90, 25);
             this.label3.TabIndex = 22;
             this.label3.Text = "Branch 3";
             // 
@@ -85,51 +90,60 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(256, 169);
+            this.label4.Location = new System.Drawing.Point(341, 208);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.Size = new System.Drawing.Size(90, 25);
             this.label4.TabIndex = 23;
             this.label4.Text = "Branch 2";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 207);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(16, 255);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(176, 264);
+            this.listBox1.Size = new System.Drawing.Size(233, 324);
             this.listBox1.TabIndex = 24;
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(260, 207);
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(347, 255);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(176, 264);
+            this.listBox2.Size = new System.Drawing.Size(233, 324);
             this.listBox2.TabIndex = 25;
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(505, 207);
+            this.listBox3.ItemHeight = 16;
+            this.listBox3.Location = new System.Drawing.Point(673, 255);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(4);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(176, 264);
+            this.listBox3.Size = new System.Drawing.Size(233, 324);
             this.listBox3.TabIndex = 26;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(12, 100);
+            this.button3.Location = new System.Drawing.Point(16, 123);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 50);
+            this.button3.Size = new System.Drawing.Size(133, 62);
             this.button3.TabIndex = 27;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // ad_cars
+            // CarAddDelete
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 611);
+            this.ClientSize = new System.Drawing.Size(1112, 752);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
@@ -139,7 +153,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Name = "ad_cars";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "CarAddDelete";
             this.Text = "Add/Delete Cars";
             this.ResumeLayout(false);
             this.PerformLayout();
