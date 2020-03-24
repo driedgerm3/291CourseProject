@@ -10,21 +10,29 @@ using System.Windows.Forms;
 
 namespace _291CourseProject
 {
-    public partial class ad_employees : Form
+    public partial class AddEmployee : Form
     {
-        public ad_employees()
+        public AddEmployee()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void AddEmployee_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is EmployeeAddDelete)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
         }
     }
 }

@@ -46,71 +46,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_car.cs">
+    <Compile Include="AddCar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_car.Designer.cs">
-      <DependentUpon>add_car.cs</DependentUpon>
+    <Compile Include="AddCar.Designer.cs">
+      <DependentUpon>AddCar.cs</DependentUpon>
     </Compile>
-    <Compile Include="add_customer.cs">
+    <Compile Include="AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_customer.Designer.cs">
-      <DependentUpon>add_customer.cs</DependentUpon>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="add_employee.cs">
+    <Compile Include="AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_employee.Designer.cs">
-      <DependentUpon>add_employee.cs</DependentUpon>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="ad_cars.cs">
+    <Compile Include="CarAddDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ad_cars.Designer.cs">
-      <DependentUpon>ad_cars.cs</DependentUpon>
+    <Compile Include="CarAddDelete.Designer.cs">
+      <DependentUpon>CarAddDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="ad_customers.cs">
+    <Compile Include="CustomerAddDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ad_customers.Designer.cs">
-      <DependentUpon>ad_customers.cs</DependentUpon>
+    <Compile Include="CustomerAddDelete.Designer.cs">
+      <DependentUpon>CustomerAddDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="ad_employees.cs">
+    <Compile Include="EmployeeAddDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ad_employees.Designer.cs">
-      <DependentUpon>ad_employees.cs</DependentUpon>
+    <Compile Include="EmployeeAddDelete.Designer.cs">
+      <DependentUpon>EmployeeAddDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="CarSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="CarSelect.Designer.cs">
+      <DependentUpon>CarSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeSelector.cs">
       <SubType>Form</SubType>
@@ -120,47 +108,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="report_generator.cs">
+    <Compile Include="GenerateReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="report_generator.Designer.cs">
-      <DependentUpon>report_generator.cs</DependentUpon>
+    <Compile Include="GenerateReport.Designer.cs">
+      <DependentUpon>GenerateReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="vp_transactions.cs">
+    <Compile Include="TransactionsViewProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vp_transactions.Designer.cs">
-      <DependentUpon>vp_transactions.cs</DependentUpon>
+    <Compile Include="TransactionsViewProcess.Designer.cs">
+      <DependentUpon>TransactionsViewProcess.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="add_car.resx">
-      <DependentUpon>add_car.cs</DependentUpon>
+    <EmbeddedResource Include="AddCar.resx">
+      <DependentUpon>AddCar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="add_customer.resx">
-      <DependentUpon>add_customer.cs</DependentUpon>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="add_employee.resx">
-      <DependentUpon>add_employee.cs</DependentUpon>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ad_cars.resx">
-      <DependentUpon>ad_cars.cs</DependentUpon>
+    <EmbeddedResource Include="CarAddDelete.resx">
+      <DependentUpon>CarAddDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ad_customers.resx">
-      <DependentUpon>ad_customers.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerAddDelete.resx">
+      <DependentUpon>CustomerAddDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ad_employees.resx">
-      <DependentUpon>ad_employees.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeAddDelete.resx">
+      <DependentUpon>EmployeeAddDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="CarSelect.resx">
+      <DependentUpon>CarSelect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeSelector.resx">
       <DependentUpon>ModeSelector.cs</DependentUpon>
@@ -174,11 +159,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="report_generator.resx">
-      <DependentUpon>report_generator.cs</DependentUpon>
+    <EmbeddedResource Include="GenerateReport.resx">
+      <DependentUpon>GenerateReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vp_transactions.resx">
-      <DependentUpon>vp_transactions.cs</DependentUpon>
+    <EmbeddedResource Include="TransactionsViewProcess.resx">
+      <DependentUpon>TransactionsViewProcess.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

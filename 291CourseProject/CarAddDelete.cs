@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace _291CourseProject
 {
-    public partial class ModeSelector : Form
+    public partial class CarAddDelete : Form
     {
-        public ModeSelector()
+        public CarAddDelete()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var form = new Employee();
-
-            form.Show();
-            this.Hide();
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is Employee)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
         }
 
-        private void ModeSelector_Load(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var form = new Customer();
+            var form = new AddCar();
 
             form.Show();
             this.Hide();

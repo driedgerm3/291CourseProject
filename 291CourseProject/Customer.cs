@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _291CourseProject
 {
-    public partial class Form1 : Form
+    public partial class Customer : Form
     {
-        public Form1()
+        public Customer()
         {
             InitializeComponent();
         }
@@ -60,6 +60,27 @@ namespace _291CourseProject
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is ModeSelector)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form = new CarSelect();
+
+            form.Show();
+            this.Hide();
         }
     }
 }

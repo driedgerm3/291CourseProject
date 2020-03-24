@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _291CourseProject
 {
-    public partial class vp_transactions : Form
+    public partial class TransactionsViewProcess : Form
     {
-        public vp_transactions()
+        public TransactionsViewProcess()
         {
             InitializeComponent();
         }
@@ -30,6 +30,19 @@ namespace _291CourseProject
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is Employee)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
         }
     }
 }
