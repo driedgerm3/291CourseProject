@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.carComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -71,14 +71,14 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Select A Car";
             // 
-            // comboBox
+            // carComboBox
             // 
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(21, 241);
-            this.comboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(160, 24);
-            this.comboBox.TabIndex = 26;
+            this.carComboBox.FormattingEnabled = true;
+            this.carComboBox.Location = new System.Drawing.Point(21, 241);
+            this.carComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.carComboBox.Name = "carComboBox";
+            this.carComboBox.Size = new System.Drawing.Size(160, 24);
+            this.carComboBox.TabIndex = 26;
             // 
             // button1
             // 
@@ -90,6 +90,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Rent Vehicle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CarSelect
             // 
@@ -97,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox);
+            this.Controls.Add(this.carComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -114,7 +115,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.ComboBox carComboBox;
         private System.Windows.Forms.Button button1;
     }
 }
