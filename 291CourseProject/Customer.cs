@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,41 +16,22 @@ namespace _291CourseProject
         public Customer()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox01_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            //sql connection
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Data Source=(local);Initial Catalog=291_Project;Integrated Security=True";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            //select statement, get branches
+            SqlCommand command = new SqlCommand("Select * from [Branch]", cnn);
+            SqlDataReader sqlReader = command.ExecuteReader();
+            while (sqlReader.Read())
+            {
+                //populate combobox
+                branches.Items.Add(sqlReader["Branch_ID"].ToString());
+            }
+            sqlReader.Close();
+            cnn.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,10 +59,25 @@ namespace _291CourseProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var form = new CarSelect();
+            if (string.IsNullOrEmpty(branches.Text))
+            {
+                System.Windows.Forms.MessageBox.Show("Please select a pickup location");
+            }
+            else
+            {
+                //get values
+                string selectedBranch = this.branches.GetItemText(this.branches.SelectedItem);
+                DateTime pickupDate = this.pickupDate.Value.Date;
+                TimeSpan pickupTime = this.pickupTime.Value.TimeOfDay;
+                DateTime dropoffDate = this.dropoffDate.Value.Date;
+                TimeSpan dropoffTime = this.dropoffTime.Value.TimeOfDay;
+                
+                //run next form with selected values
+                var form = new CarSelect(selectedBranch, pickupDate, dropoffDate, pickupTime, dropoffTime);
 
-            form.Show();
-            this.Hide();
-        }
+                form.Show();
+                this.Hide();
+            }
+        }    
     }
 }

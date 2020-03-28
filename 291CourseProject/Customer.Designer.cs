@@ -29,42 +29,47 @@
         private void InitializeComponent()
         {
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.branches = new System.Windows.Forms.ComboBox();
+            this.pickupDate = new System.Windows.Forms.DateTimePicker();
+            this.dropoffDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pickupTime = new System.Windows.Forms.DateTimePicker();
+            this.dropoffTime = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // branches
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(16, 266);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 8;
+            this.branches.FormattingEnabled = true;
+            this.branches.Location = new System.Drawing.Point(16, 266);
+            this.branches.Margin = new System.Windows.Forms.Padding(4);
+            this.branches.Name = "branches";
+            this.branches.Size = new System.Drawing.Size(160, 24);
+            this.branches.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // pickupDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 368);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker1.TabIndex = 9;
+            this.pickupDate.Location = new System.Drawing.Point(16, 368);
+            this.pickupDate.Margin = new System.Windows.Forms.Padding(4);
+            this.pickupDate.Name = "pickupDate";
+            this.pickupDate.Size = new System.Drawing.Size(265, 22);
+            this.pickupDate.TabIndex = 9;
             // 
-            // dateTimePicker2
+            // dropoffDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(16, 471);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
-            this.dateTimePicker2.TabIndex = 10;
+            this.dropoffDate.Location = new System.Drawing.Point(16, 471);
+            this.dropoffDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dropoffDate.Name = "dropoffDate";
+            this.dropoffDate.Size = new System.Drawing.Size(265, 22);
+            this.dropoffDate.TabIndex = 10;
+            this.dropoffDate.Value = new System.DateTime(2020, 3, 28, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -96,7 +101,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(566, 323);
+            this.button1.Location = new System.Drawing.Point(898, 452);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 62);
@@ -105,17 +110,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // backButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(16, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 31);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.backButton.Location = new System.Drawing.Point(16, 69);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(107, 31);
+            this.backButton.TabIndex = 16;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -150,22 +155,65 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Pick-up Date";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(396, 340);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Pick-up Time";
+            // 
+            // pickupTime
+            // 
+            this.pickupTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.pickupTime.Location = new System.Drawing.Point(401, 368);
+            this.pickupTime.Name = "pickupTime";
+            this.pickupTime.Size = new System.Drawing.Size(140, 22);
+            this.pickupTime.TabIndex = 25;
+            // 
+            // dropoffTime
+            // 
+            this.dropoffTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dropoffTime.Location = new System.Drawing.Point(401, 471);
+            this.dropoffTime.Name = "dropoffTime";
+            this.dropoffTime.Size = new System.Drawing.Size(140, 22);
+            this.dropoffTime.TabIndex = 26;
+            this.dropoffTime.Value = new System.DateTime(2020, 3, 28, 0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label7.Location = new System.Drawing.Point(396, 443);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 25);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Drop-off Time";
+            // 
             // Customer
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dropoffTime);
+            this.Controls.Add(this.pickupTime);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dropoffDate);
+            this.Controls.Add(this.pickupDate);
+            this.Controls.Add(this.branches);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customer";
             this.Text = "Enter Information";
@@ -176,16 +224,20 @@
 
         #endregion
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox branches;
+        private System.Windows.Forms.DateTimePicker pickupDate;
+        private System.Windows.Forms.DateTimePicker dropoffDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker pickupTime;
+        private System.Windows.Forms.DateTimePicker dropoffTime;
+        private System.Windows.Forms.Label label7;
     }
 }
 
