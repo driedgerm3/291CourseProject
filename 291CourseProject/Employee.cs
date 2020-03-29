@@ -69,5 +69,14 @@ namespace _291CourseProject
             form.Show();
             this.Hide();
         }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Employee_FormClosing(object sender, CancelEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
