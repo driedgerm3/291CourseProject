@@ -87,11 +87,11 @@ namespace _291CourseProject
             //insert values
             SqlCommand rentalInsertcmd = new SqlCommand(rentalInsert, cnn);
             rentalInsertcmd.Parameters.AddWithValue("@Rental_ID", Rental_ID);
-            rentalInsertcmd.Parameters.AddWithValue("@Rental_Type", 2);
+            rentalInsertcmd.Parameters.AddWithValue("@Rental_Type", 2);//****************edit************************************************
             rentalInsertcmd.Parameters.AddWithValue("@Pickup_Date", this.pickupDate);
             rentalInsertcmd.Parameters.AddWithValue("@Pickup_time", this.pickupTime);
             rentalInsertcmd.Parameters.AddWithValue("@Return_Date", this.dropoffDate);
-            rentalInsertcmd.Parameters.AddWithValue("@Return_Time", this.pickupTime);
+            rentalInsertcmd.Parameters.AddWithValue("@Return_Time", this.dropoffTime);
 
             //insert statement
             string rentedInsert = "INSERT INTO dbo.Rented(Rental_ID,Car_ID) VALUES(@Rental_ID,@Car_ID)";
@@ -99,12 +99,14 @@ namespace _291CourseProject
             SqlCommand rentedInsertcmd = new SqlCommand(rentedInsert, cnn);
             rentedInsertcmd.Parameters.AddWithValue("@Rental_ID", Rental_ID);
             rentedInsertcmd.Parameters.AddWithValue("@Car_ID", selectedCar);
-
+            
+            SqlCommand command = new SqlCommand("Update IDTracker Set Rental_ID = Rental_ID + 1", cnn);
             //try inserts
             try
             {
                 rentalInsertcmd.ExecuteNonQuery();
                 rentedInsertcmd.ExecuteNonQuery();
+                command.ExecuteNonQuery();
                 System.Windows.Forms.MessageBox.Show("Rental has been accepted\nProgram will now close");
                 Application.Exit();
 
@@ -118,6 +120,7 @@ namespace _291CourseProject
 
         private int getRentalID(SqlConnection cnn)
         {
+            //Method to get current rental id
             cnn.Open();
             SqlCommand cmd = new SqlCommand("Select * from IDTracker", cnn);
             SqlDataReader rdr = cmd.ExecuteReader();
@@ -127,8 +130,6 @@ namespace _291CourseProject
                 Rental_ID[0] = (int)rdr["Rental_ID"];
             }
             rdr.Close();
-            SqlCommand command = new SqlCommand("Update IDTracker Set Rental_ID = Rental_ID + 1", cnn);
-            command.ExecuteNonQuery();
             cnn.Close();
             return Rental_ID[0];
         }
