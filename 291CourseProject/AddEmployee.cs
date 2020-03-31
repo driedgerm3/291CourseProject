@@ -39,5 +39,20 @@ namespace _291CourseProject
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("A new employee has been added.");
+
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is EmployeeAddDelete)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
+        }
     }
 }
