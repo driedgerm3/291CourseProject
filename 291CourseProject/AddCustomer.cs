@@ -29,5 +29,25 @@ namespace _291CourseProject
             }
             this.Close();
         }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("A new customer has been added.");
+
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is CustomerAddDelete)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
+        }
     }
 }
