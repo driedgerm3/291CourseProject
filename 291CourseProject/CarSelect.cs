@@ -68,6 +68,11 @@ namespace _291CourseProject
                 string selectedCar = this.carComboBox.GetItemText(this.carComboBox.SelectedItem);
                 sqlInserts(selectedCar);
             }
+
+            var form = new RentalConfirmation();
+
+            form.Show();
+            this.Hide();
         }
 
 

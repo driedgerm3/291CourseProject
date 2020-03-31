@@ -117,6 +117,12 @@
     <Compile Include="GenerateReport.Designer.cs">
       <DependentUpon>GenerateReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentalConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentalConfirmation.Designer.cs">
+      <DependentUpon>RentalConfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionsViewProcess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="GenerateReport.resx">
       <DependentUpon>GenerateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentalConfirmation.resx">
+      <DependentUpon>RentalConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionsViewProcess.resx">
       <DependentUpon>TransactionsViewProcess.cs</DependentUpon>

@@ -34,5 +34,20 @@ namespace _291CourseProject
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("A new car has been added.");
+
+            foreach (Form oForm in Application.OpenForms)
+            {
+                if (oForm is CarAddDelete)
+                {
+                    oForm.Show();
+                    break;
+                }
+            }
+            this.Close();
+        }
     }
 }
