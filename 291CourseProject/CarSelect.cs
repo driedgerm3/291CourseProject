@@ -99,7 +99,7 @@ namespace _291CourseProject
             SqlCommand rentedInsertcmd = new SqlCommand(rentedInsert, cnn);
             rentedInsertcmd.Parameters.AddWithValue("@Rental_ID", Rental_ID);
             rentedInsertcmd.Parameters.AddWithValue("@Car_ID", selectedCar);
-            
+
             SqlCommand command = new SqlCommand("Update IDTracker Set Rental_ID = Rental_ID + 1", cnn);
             //try inserts
             try
@@ -107,8 +107,10 @@ namespace _291CourseProject
                 rentalInsertcmd.ExecuteNonQuery();
                 rentedInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Rental has been accepted\nProgram will now close");
-                Application.Exit();
+                var form = new RentalConfirmation();
+
+                form.Show();
+                this.Hide();
 
             }
             catch
