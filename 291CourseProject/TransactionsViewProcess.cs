@@ -94,6 +94,15 @@ namespace _291CourseProject
 
                     }
                 }
+                foreach (Form oForm in Application.OpenForms)
+                {
+                    if (oForm is Employee)
+                    {
+                        oForm.Show();
+                        break;
+                    }
+                }
+                this.Close();
             }
             else
             {
@@ -173,6 +182,15 @@ namespace _291CourseProject
 
                     }
                 }
+                foreach (Form oForm in Application.OpenForms)
+                {
+                    if (oForm is Employee)
+                    {
+                        oForm.Show();
+                        break;
+                    }
+                }
+                this.Close();
             }
             else
             {

@@ -35,7 +35,8 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get car ids
-            SqlCommand command = new SqlCommand("Select * from [Car] where Branch_ID = " + selectedBranch, cnn);
+            SqlCommand command = new SqlCommand("Select * from [Car] where Branch_ID = @Branch_ID", cnn);
+            command.Parameters.AddWithValue("@Branch_ID", selectedBranch);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
@@ -102,7 +103,7 @@ namespace _291CourseProject
                 transactionInsertcmd.ExecuteNonQuery();
                 pickupInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                var form = new RentalConfirmation();
+                var form = new RentalConfirmation(Rental_ID);
 
                 form.Show();
                 this.Hide();
