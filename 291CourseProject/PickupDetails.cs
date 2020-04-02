@@ -18,6 +18,15 @@ namespace _291CourseProject
         {
             this.Customer_ID = userID;
             InitializeComponent();
+            pickupDate.Value = DateTime.Today;
+            pickupTime.Value = DateTime.Now;
+            dropoffDate.Value = DateTime.Today.AddDays(1);
+            dropoffTime.Value = DateTime.UtcNow;
+            branchesPopulate();
+        }
+
+        private void branchesPopulate()
+        {
             //sql connection
             string connetionString;
             SqlConnection cnn;
