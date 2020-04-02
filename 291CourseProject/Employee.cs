@@ -131,7 +131,7 @@ namespace _291CourseProject
             SqlDataReader r7 = c7.ExecuteReader();
             while (r7.Read())
             {
-                ca1.Add("Car ID: " + r7["Car_ID"].ToString() + " Type ID: " + r7["Type_ID"].ToString() + " Passengers: " + r7["Passengers"].ToString());
+                ca1.Add("Car ID: " + r7["Car_ID"].ToString() + " Car Type: " + r7["Type_ID"].ToString() + " Passengers: " + r7["Passengers"].ToString());
             }
             r7.Close();
 
@@ -139,7 +139,7 @@ namespace _291CourseProject
             SqlDataReader r8 = c8.ExecuteReader();
             while (r8.Read())
             {
-                ca2.Add("Car ID: " + r8["Car_ID"].ToString() + " Type ID: " + r8["Type_ID"].ToString() + " Passengers: " + r8["Passengers"].ToString());
+                ca2.Add("Car ID: " + r8["Car_ID"].ToString() + " Car Type: " + r8["Type_ID"].ToString() + " Passengers: " + r8["Passengers"].ToString());
             }
             r8.Close();
 
@@ -147,16 +147,16 @@ namespace _291CourseProject
             SqlDataReader r9 = c9.ExecuteReader();
             while (r9.Read())
             {
-                ca3.Add("Car ID: " + r9["Car_ID"].ToString() + " Type ID: " + r9["Type_ID"].ToString() + " Passengers: " + r9["Passengers"].ToString());
+                ca3.Add("Car ID: " + r9["Car_ID"].ToString() + " Car Type: " + r9["Type_ID"].ToString() + " Passengers: " + r9["Passengers"].ToString());
             }
             r9.Close();
 
-            //build customer list
+            // build customer list
             SqlCommand c4 = new SqlCommand("Select * from Customer", cnn);
             SqlDataReader r4 = c4.ExecuteReader();
             while (r4.Read())
             {
-                cu.Add("ID: " + r4["Customer_ID"].ToString() + " - " + r4["First_Name"].ToString() + r4["Last_Name"].ToString());
+                cu.Add("ID: " + r4["Customer_ID"].ToString() + " Name: " + r4["First_Name"].ToString() + " " + r4["Last_Name"].ToString() + " # of Rentals: " + r4["Num_of_Rentals"].ToString() + " Email: " + r4["Email"].ToString());
             }
             r4.Close();
 
