@@ -12,9 +12,10 @@ namespace _291CourseProject
 {
     public partial class RentalConfirmation : Form
     {
-        public RentalConfirmation()
+        public RentalConfirmation(int Rental_ID)
         {
             InitializeComponent();
+            rental.Text = Rental_ID.ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)

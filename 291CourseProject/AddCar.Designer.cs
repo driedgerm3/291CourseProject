@@ -45,7 +45,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.Location = new System.Drawing.Point(16, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 31);
             this.button2.TabIndex = 22;
@@ -103,7 +103,7 @@
             // 
             this.carType.FormattingEnabled = true;
             this.carType.Location = new System.Drawing.Point(21, 283);
-            this.carType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carType.Margin = new System.Windows.Forms.Padding(4);
             this.carType.Name = "carType";
             this.carType.Size = new System.Drawing.Size(160, 24);
             this.carType.TabIndex = 39;
@@ -112,7 +112,7 @@
             // 
             this.branch.FormattingEnabled = true;
             this.branch.Location = new System.Drawing.Point(21, 390);
-            this.branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.branch.Margin = new System.Windows.Forms.Padding(4);
             this.branch.Name = "branch";
             this.branch.Size = new System.Drawing.Size(160, 24);
             this.branch.TabIndex = 41;
@@ -132,7 +132,7 @@
             // numOfPassengers
             // 
             this.numOfPassengers.Location = new System.Drawing.Point(361, 283);
-            this.numOfPassengers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numOfPassengers.Margin = new System.Windows.Forms.Padding(4);
             this.numOfPassengers.Maximum = new decimal(new int[] {
             8,
             0,
@@ -156,7 +156,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Location = new System.Drawing.Point(361, 354);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 62);
             this.button1.TabIndex = 43;
@@ -179,7 +179,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddCar";
             this.Text = "Add Employee";
             ((System.ComponentModel.ISupportInitialize)(this.numOfPassengers)).EndInit();

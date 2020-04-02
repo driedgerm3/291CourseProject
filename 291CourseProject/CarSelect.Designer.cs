@@ -33,6 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.carComboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rentalLength = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -92,11 +94,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(300, 212);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Rental Type";
+            // 
+            // rentalLength
+            // 
+            this.rentalLength.FormattingEnabled = true;
+            this.rentalLength.Items.AddRange(new object[] {
+            "Daily",
+            "Weekly",
+            "Monthly"});
+            this.rentalLength.Location = new System.Drawing.Point(305, 241);
+            this.rentalLength.Margin = new System.Windows.Forms.Padding(4);
+            this.rentalLength.Name = "rentalLength";
+            this.rentalLength.Size = new System.Drawing.Size(160, 24);
+            this.rentalLength.TabIndex = 29;
+            // 
             // CarSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
+            this.Controls.Add(this.rentalLength);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.carComboBox);
             this.Controls.Add(this.label3);
@@ -117,5 +145,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox carComboBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox rentalLength;
     }
 }

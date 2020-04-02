@@ -61,6 +61,15 @@ namespace _291CourseProject
                 edmontonDelete();
                 calgaryDelete();
                 leducDelete();
+                foreach (Form oForm in Application.OpenForms)
+                {
+                    if (oForm is Employee)
+                    {
+                        oForm.Show();
+                        break;
+                    }
+                }
+                this.Close();
             }
         }
 
@@ -78,7 +87,7 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get edmonton cars
-            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = '1'", cnn);
+            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = 'Edmonton'", cnn);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
@@ -100,7 +109,7 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get edmonton cars
-            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = '2'", cnn);
+            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = 'Calgary'", cnn);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
@@ -122,7 +131,7 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get edmonton cars
-            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = '3'", cnn);
+            SqlCommand command = new SqlCommand("Select * from [Employee] where Branch_ID = 'Leduc'", cnn);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {

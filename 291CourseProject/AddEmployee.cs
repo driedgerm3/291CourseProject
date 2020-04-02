@@ -133,11 +133,18 @@ namespace _291CourseProject
             employeeInsertcmd.Parameters.AddWithValue("@Last_Name", Last_Name.Text);
             employeeInsertcmd.Parameters.AddWithValue("@Branch_ID", branch.GetItemText(branch.SelectedItem));
 
+            string employsInsert = "INSERT INTO dbo.Employs(Branch_ID,Employee_ID) VALUES(@Branch_ID,@Employee_ID)";
+            //insert values
+            SqlCommand employsInsertcmd = new SqlCommand(employsInsert, cnn);
+            employsInsertcmd.Parameters.AddWithValue("@Branch_ID", branch.GetItemText(branch.SelectedItem));
+            employsInsertcmd.Parameters.AddWithValue("@Employee_ID", Employee_ID);
+
             SqlCommand command = new SqlCommand("Update IDTracker Set Employee_ID = Employee_ID + 1", cnn);
             //try inserts
             try
             {
                 employeeInsertcmd.ExecuteNonQuery();
+                employsInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
                 Employee_Added();
 
