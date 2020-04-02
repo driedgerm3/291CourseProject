@@ -128,11 +128,25 @@ namespace _291CourseProject
             carInsertcmd.Parameters.AddWithValue("@Branch_ID", branch.GetItemText(branch.SelectedItem));
             carInsertcmd.Parameters.AddWithValue("@Passengers", numOfPassengers.Value.ToString());
 
+            string belongsToInsert = "INSERT INTO dbo.BelongsTo(Car_ID,Type_ID) VALUES(@Car_ID,@Type_ID)";
+            //insert values
+            SqlCommand belongsToInsertcmd = new SqlCommand(belongsToInsert, cnn);
+            belongsToInsertcmd.Parameters.AddWithValue("@Car_ID", Car_ID);
+            belongsToInsertcmd.Parameters.AddWithValue("@Type_ID", carType.GetItemText(carType.SelectedItem));
+
+            string ownsInsert = "INSERT INTO dbo.Owns(Car_ID,Branch_ID) VALUES(@Car_ID,@Branch_ID)";
+            //insert values
+            SqlCommand ownsInsertcmd = new SqlCommand(ownsInsert, cnn);
+            ownsInsertcmd.Parameters.AddWithValue("@Car_ID", Car_ID);
+            ownsInsertcmd.Parameters.AddWithValue("@Branch_ID", branch.GetItemText(branch.SelectedItem));
+
             SqlCommand command = new SqlCommand("Update IDTracker Set Car_ID = Car_ID + 1", cnn);
             //try inserts
             try
             {
                 carInsertcmd.ExecuteNonQuery();
+                belongsToInsertcmd.ExecuteNonQuery();
+                ownsInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
                 Car_Added();
 

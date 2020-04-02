@@ -96,7 +96,7 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get car ids
-            SqlCommand command = new SqlCommand("Select * from dbo.Transactions where Customer_ID = @User_ID and Rental_ID not in (Select Rental_ID from Dropoff)", cnn);
+            SqlCommand command = new SqlCommand("Select * from dbo.ProcessedTransactions where Customer_ID = @User_ID and Rental_ID not in (Select Rental_ID from Dropoff)", cnn);
             command.Parameters.AddWithValue("@User_ID", this.Customer_ID);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
