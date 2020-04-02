@@ -19,6 +19,7 @@ namespace _291CourseProject
         TimeSpan pickupTime;
         TimeSpan dropoffTime;
         string Customer_ID;
+        List<Car> carList = new List<Car>();
         public CarSelect(string selectedBranch, DateTime pickupDate, DateTime dropoffDate, TimeSpan pickupTime, TimeSpan dropoffTime, string userID)
         {
             this.selectedBranch = selectedBranch;
@@ -28,6 +29,11 @@ namespace _291CourseProject
             this.dropoffTime = dropoffTime;
             this.Customer_ID = userID;
             InitializeComponent();
+            carPopulate();
+        }
+
+        private void carPopulate()
+        {
             //sql connection
             string connetionString;
             SqlConnection cnn;
@@ -35,12 +41,15 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get car ids
-            SqlCommand command = new SqlCommand("Select * from [Car] where Branch_ID = " + selectedBranch, cnn);
+            SqlCommand command = new SqlCommand("Select * from Car, BelongsTo where Car.Branch_ID = @Branch_ID and Car.Car_ID = BelongsTo.Car_ID", cnn);
+            command.Parameters.AddWithValue("@Branch_ID", selectedBranch);
+
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
                 //populate combobox
-                carComboBox.Items.Add(sqlReader["Car_ID"].ToString());
+                Car car = new Car(sqlReader["Car_ID"].ToString(), sqlReader["Type_ID"].ToString());
+                carComboBox.Items.Add(car);
             }
             sqlReader.Close();
             cnn.Close();
@@ -67,8 +76,9 @@ namespace _291CourseProject
             }
             else
             {
-                string selectedCar = this.carComboBox.GetItemText(this.carComboBox.SelectedItem);
-                sqlInserts(selectedCar);
+                //string selectedCar = this.carComboBox.GetItemText(this.carComboBox.SelectedItem);
+                Car selectedCar = (Car)this.carComboBox.SelectedItem;
+                sqlInserts(selectedCar.getCarID());
             }
         }
 
@@ -102,7 +112,7 @@ namespace _291CourseProject
                 transactionInsertcmd.ExecuteNonQuery();
                 pickupInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                var form = new RentalConfirmation();
+                var form = new RentalConfirmation(Rental_ID);
 
                 form.Show();
                 this.Hide();
@@ -138,7 +148,7 @@ namespace _291CourseProject
             //insert values
             SqlCommand rentalInsertcmd = new SqlCommand(rentalInsert, cnn);
             rentalInsertcmd.Parameters.AddWithValue("@Rental_ID", Rental_ID);
-            rentalInsertcmd.Parameters.AddWithValue("@Rental_Type", 2);//****************edit************************************************
+            rentalInsertcmd.Parameters.AddWithValue("@Rental_Type", rentalType());
             rentalInsertcmd.Parameters.AddWithValue("@Pickup_Date", this.pickupDate);
             rentalInsertcmd.Parameters.AddWithValue("@Pickup_time", this.pickupTime);
             rentalInsertcmd.Parameters.AddWithValue("@Return_Date", this.dropoffDate);
@@ -146,6 +156,23 @@ namespace _291CourseProject
 
 
             return rentalInsertcmd;
+        }
+
+        private int rentalType()
+        {
+            string length = rentalLength.Text;
+            if (length.Equals("Weekly"))
+            {
+                return 1;
+            }
+            else if (length.Equals("Weekly"))
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
         }
 
         private SqlCommand Rented_Insert(SqlConnection cnn, int Rental_ID, string selectedCar)
@@ -163,7 +190,7 @@ namespace _291CourseProject
         private SqlCommand Transaction_Insert(SqlConnection cnn, int Rental_ID)
         {
             //insert statement
-            string transactionInsert = "INSERT INTO dbo.Transactions(Customer_ID,Rental_ID) VALUES(@Customer_ID,@Rental_ID)";
+            string transactionInsert = "INSERT INTO dbo.OngoingTransactions(Customer_ID,Rental_ID) VALUES(@Customer_ID,@Rental_ID)";
             //insert values
             SqlCommand transactionInsertcmd = new SqlCommand(transactionInsert, cnn);
             transactionInsertcmd.Parameters.AddWithValue("@Customer_ID", this.Customer_ID);
