@@ -61,6 +61,7 @@
             this.pickupDate.Name = "pickupDate";
             this.pickupDate.Size = new System.Drawing.Size(265, 22);
             this.pickupDate.TabIndex = 9;
+            this.pickupDate.Value = new System.DateTime(2020, 4, 2, 17, 34, 0, 0);
             // 
             // dropoffDate
             // 
@@ -69,7 +70,7 @@
             this.dropoffDate.Name = "dropoffDate";
             this.dropoffDate.Size = new System.Drawing.Size(265, 22);
             this.dropoffDate.TabIndex = 10;
-            this.dropoffDate.Value = new System.DateTime(2020, 3, 28, 0, 0, 0, 0);
+            this.dropoffDate.Value = new System.DateTime(2020, 4, 2, 0, 0, 0, 0);
             // 
             // label1
             // 
