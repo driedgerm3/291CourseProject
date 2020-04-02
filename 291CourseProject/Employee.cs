@@ -175,7 +175,7 @@ namespace _291CourseProject
             //*************************************************************************************************************************************************
 
             // set up PDF, make new section
-            string pdfPath = @"testReport1.pdf";
+            string pdfPath = @"CMB_Report.pdf";
             DocumentCore dc = new DocumentCore();
 
             Section section = new Section(dc);
@@ -228,9 +228,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = employee;
                 par2.Inlines.Add(text);
+                par2.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par2.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             Run text11 = text4.Clone();
             text11.Text = "Cars:";
@@ -243,9 +242,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = car;
                 par2.Inlines.Add(text);
+                par2.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par2.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
@@ -271,9 +269,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = employee;
                 par3.Inlines.Add(text);
+                par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             Run text13 = text4.Clone();
             text13.Text = "Cars:";
@@ -286,9 +283,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = car;
                 par3.Inlines.Add(text);
+                par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
@@ -314,9 +310,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = employee;
                 par4.Inlines.Add(text);
+                par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             Run text15 = text4.Clone();
             text15.Text = "Cars:";
@@ -329,9 +324,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = car;
                 par4.Inlines.Add(text);
+                par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
@@ -351,9 +345,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = customer;
                 par5.Inlines.Add(text);
+                par5.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par5.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
@@ -373,9 +366,8 @@ namespace _291CourseProject
                 Run text = text4.Clone();
                 text.Text = rental;
                 par6.Inlines.Add(text);
+                par6.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
             }
-
-            par6.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
