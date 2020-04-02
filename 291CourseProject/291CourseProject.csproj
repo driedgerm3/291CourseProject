@@ -88,11 +88,11 @@
     <Compile Include="EmployeeAddDelete.Designer.cs">
       <DependentUpon>EmployeeAddDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="PickupDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="PickupDetails.Designer.cs">
+      <DependentUpon>PickupDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="CarSelect.cs">
       <SubType>Form</SubType>
@@ -105,6 +105,18 @@
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleDropoff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleDropoff.Designer.cs">
+      <DependentUpon>VehicleDropoff.cs</DependentUpon>
     </Compile>
     <Compile Include="ModeSelector.cs">
       <SubType>Form</SubType>
@@ -151,14 +163,20 @@
     <EmbeddedResource Include="EmployeeAddDelete.resx">
       <DependentUpon>EmployeeAddDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="VehicleDropoff.resx">
+      <DependentUpon>VehicleDropoff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickupDetails.resx">
+      <DependentUpon>PickupDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarSelect.resx">
       <DependentUpon>CarSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeSelector.resx">
       <DependentUpon>ModeSelector.cs</DependentUpon>
