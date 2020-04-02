@@ -165,7 +165,7 @@ namespace _291CourseProject
             SqlDataReader r10 = c10.ExecuteReader();
             while (r10.Read())
             {
-                re.Add("ID: " + r10["Rental_ID"].ToString() + " Pick-up Date: " + r10["Pickup_Date"].ToString() + " Drop-off Date: " + r10["Dropoff_Date"].ToString());
+                re.Add("ID: " + r10["Rental_ID"].ToString() + " Pick-up Date: " + r10["Pickup_Date"].ToString() + " Drop-off Date: " + r10["Return_Date"].ToString());
             }
             r10.Close();
 

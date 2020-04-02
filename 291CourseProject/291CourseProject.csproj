@@ -76,6 +76,7 @@
     <Compile Include="CarAddDelete.Designer.cs">
       <DependentUpon>CarAddDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="CustomerAddDelete.cs">
       <SubType>Form</SubType>
