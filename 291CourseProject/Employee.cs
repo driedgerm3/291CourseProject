@@ -225,14 +225,14 @@ namespace _291CourseProject
 
             foreach (string employee in em1)
             {
-                Run text = text3.Clone();
+                Run text = text4.Clone();
                 text.Text = employee;
                 par2.Inlines.Add(text);
             }
 
             par2.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
-            Run text11 = text3.Clone();
+            Run text11 = text4.Clone();
             text11.Text = "Cars:";
             par2.Inlines.Add(text11);
 
@@ -240,7 +240,7 @@ namespace _291CourseProject
 
             foreach (string car in ca1)
             {
-                Run text = text3.Clone();
+                Run text = text4.Clone();
                 text.Text = car;
                 par2.Inlines.Add(text);
             }
@@ -260,9 +260,35 @@ namespace _291CourseProject
 
             par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
-            Run text6 = text4.Clone();
-            text6.Text = "insert data here...";
-            par3.Inlines.Add(text6);
+            Run text12 = text4.Clone();
+            text12.Text = "Employees:";
+            par3.Inlines.Add(text12);
+
+            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string employee in em2)
+            {
+                Run text = text4.Clone();
+                text.Text = employee;
+                par3.Inlines.Add(text);
+            }
+
+            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            Run text13 = text4.Clone();
+            text13.Text = "Cars:";
+            par3.Inlines.Add(text13);
+
+            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string car in ca2)
+            {
+                Run text = text4.Clone();
+                text.Text = car;
+                par3.Inlines.Add(text);
+            }
+
+            par3.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
@@ -277,9 +303,79 @@ namespace _291CourseProject
 
             par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
-            Run text8 = text4.Clone();
-            text8.Text = "insert data here...";
-            par4.Inlines.Add(text8);
+            Run text14 = text4.Clone();
+            text14.Text = "Employees:";
+            par4.Inlines.Add(text14);
+
+            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string employee in em3)
+            {
+                Run text = text4.Clone();
+                text.Text = employee;
+                par4.Inlines.Add(text);
+            }
+
+            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            Run text15 = text4.Clone();
+            text15.Text = "Cars:";
+            par4.Inlines.Add(text15);
+
+            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string car in ca3)
+            {
+                Run text = text4.Clone();
+                text.Text = car;
+                par4.Inlines.Add(text);
+            }
+
+            par4.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            //*************************************************************************************************************************************************
+
+            // customers
+            Paragraph par5 = new Paragraph(dc);
+            par5.ParagraphFormat.Alignment = SautinSoft.Document.HorizontalAlignment.Left;
+            section.Blocks.Add(par5);
+
+            Run text16 = text3.Clone();
+            text16.Text = "Customers:";
+            par5.Inlines.Add(text16);
+
+            par5.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string customer in cu)
+            {
+                Run text = text4.Clone();
+                text.Text = customer;
+                par5.Inlines.Add(text);
+            }
+
+            par5.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            //*************************************************************************************************************************************************
+
+            // rentals
+            Paragraph par6 = new Paragraph(dc);
+            par6.ParagraphFormat.Alignment = SautinSoft.Document.HorizontalAlignment.Left;
+            section.Blocks.Add(par6);
+
+            Run text17 = text3.Clone();
+            text17.Text = "Rental Transactions:";
+            par6.Inlines.Add(text17);
+
+            par6.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
+
+            foreach (string rental in re)
+            {
+                Run text = text4.Clone();
+                text.Text = rental;
+                par6.Inlines.Add(text);
+            }
+
+            par6.Inlines.Add(new SpecialCharacter(dc, SpecialCharacterType.LineBreak));
 
             //*************************************************************************************************************************************************
 
