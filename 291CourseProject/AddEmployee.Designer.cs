@@ -44,7 +44,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.Location = new System.Drawing.Point(16, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 31);
             this.button2.TabIndex = 22;
@@ -79,7 +79,7 @@
             // First_Name
             // 
             this.First_Name.Location = new System.Drawing.Point(21, 281);
-            this.First_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.First_Name.Margin = new System.Windows.Forms.Padding(4);
             this.First_Name.Name = "First_Name";
             this.First_Name.Size = new System.Drawing.Size(132, 22);
             this.First_Name.TabIndex = 25;
@@ -121,7 +121,7 @@
             // Last_Name
             // 
             this.Last_Name.Location = new System.Drawing.Point(21, 388);
-            this.Last_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Last_Name.Margin = new System.Windows.Forms.Padding(4);
             this.Last_Name.Name = "Last_Name";
             this.Last_Name.Size = new System.Drawing.Size(132, 22);
             this.Last_Name.TabIndex = 31;
@@ -130,7 +130,7 @@
             // 
             this.branch.FormattingEnabled = true;
             this.branch.Location = new System.Drawing.Point(361, 279);
-            this.branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.branch.Margin = new System.Windows.Forms.Padding(4);
             this.branch.Name = "branch";
             this.branch.Size = new System.Drawing.Size(160, 24);
             this.branch.TabIndex = 33;
@@ -139,7 +139,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Location = new System.Drawing.Point(361, 359);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 62);
             this.button1.TabIndex = 34;
@@ -162,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddEmployee";
             this.Text = "Add Employee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);

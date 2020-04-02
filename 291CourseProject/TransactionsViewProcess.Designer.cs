@@ -31,10 +31,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.confirmedTransactions = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.pendingTransactions = new System.Windows.Forms.CheckedListBox();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -74,16 +74,16 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Pending transaction IDs";
             // 
-            // listBox2
+            // confirmedTransactions
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(452, 178);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(295, 308);
-            this.listBox2.TabIndex = 28;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            this.confirmedTransactions.FormattingEnabled = true;
+            this.confirmedTransactions.ItemHeight = 16;
+            this.confirmedTransactions.Location = new System.Drawing.Point(452, 178);
+            this.confirmedTransactions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmedTransactions.Name = "confirmedTransactions";
+            this.confirmedTransactions.Size = new System.Drawing.Size(295, 308);
+            this.confirmedTransactions.TabIndex = 28;
+            this.confirmedTransactions.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -109,14 +109,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkedListBox1
+            // pendingTransactions
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(16, 178);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(284, 310);
-            this.checkedListBox1.TabIndex = 48;
+            this.pendingTransactions.FormattingEnabled = true;
+            this.pendingTransactions.Location = new System.Drawing.Point(16, 178);
+            this.pendingTransactions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pendingTransactions.Name = "pendingTransactions";
+            this.pendingTransactions.Size = new System.Drawing.Size(284, 310);
+            this.pendingTransactions.TabIndex = 48;
             // 
             // button3
             // 
@@ -128,6 +128,7 @@
             this.button3.TabIndex = 49;
             this.button3.Text = "Delete Selected";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // TransactionsViewProcess
             // 
@@ -135,9 +136,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.pendingTransactions);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.confirmedTransactions);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -156,10 +157,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox confirmedTransactions;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox pendingTransactions;
         private System.Windows.Forms.Button button3;
     }
 }
