@@ -11,10 +11,12 @@ using System.Windows.Forms;
 
 namespace _291CourseProject
 {
-    public partial class Customer : Form
+    public partial class PickupDetails : Form
     {
-        public Customer()
+        string Customer_ID;
+        public PickupDetails(string userID)
         {
+            this.Customer_ID = userID;
             InitializeComponent();
             //sql connection
             string connetionString;
@@ -22,23 +24,33 @@ namespace _291CourseProject
             connetionString = @"Data Source=(local);Initial Catalog=291_Project;Integrated Security=True";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
-            //select statement, get car ids
-            SqlCommand command = new SqlCommand("Select * from [Customer]", cnn);
+            //select statement, get branches
+            SqlCommand command = new SqlCommand("Select * from [Branch]", cnn);
             SqlDataReader sqlReader = command.ExecuteReader();
             while (sqlReader.Read())
             {
                 //populate combobox
-                users.Items.Add(sqlReader["Customer_ID"].ToString());
+                branches.Items.Add(sqlReader["Branch_ID"].ToString());
             }
             sqlReader.Close();
             cnn.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Form oForm in Application.OpenForms)
             {
-                if (oForm is ModeSelector)
+                if (oForm is Customer)
                 {
                     oForm.Show();
                     break;
@@ -49,34 +61,30 @@ namespace _291CourseProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(users.Text))
+            if (string.IsNullOrEmpty(branches.Text))
             {
-                System.Windows.Forms.MessageBox.Show("Please select a Customer ID");
+                System.Windows.Forms.MessageBox.Show("Please select a pickup location");
             }
             else
             {
-                string Customer_ID = this.users.GetItemText(this.users.SelectedItem);
-                var form = new PickupDetails(Customer_ID);
+                //get values
+                string selectedBranch = this.branches.GetItemText(this.branches.SelectedItem);
+                DateTime pickupDate = this.pickupDate.Value.Date;
+                TimeSpan pickupTime = this.pickupTime.Value.TimeOfDay;
+                DateTime dropoffDate = this.dropoffDate.Value.Date;
+                TimeSpan dropoffTime = this.dropoffTime.Value.TimeOfDay;
+                
+                //run next form with selected values
+                var form = new CarSelect(selectedBranch, pickupDate, dropoffDate, pickupTime, dropoffTime, this.Customer_ID);
 
                 form.Show();
                 this.Hide();
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void PickupDetails_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(users.Text))
-            {
-                System.Windows.Forms.MessageBox.Show("Please select a Customer ID");
-            }
-            else
-            {
-                string Customer_ID = this.users.GetItemText(this.users.SelectedItem);
-                var form = new VehicleDropoff(Customer_ID);
 
-                form.Show();
-                this.Hide();
-            }
         }
     }
 }
