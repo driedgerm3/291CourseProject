@@ -35,6 +35,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.rental = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.price = new System.Windows.Forms.Label();
+            this.recurance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -100,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(548, 315);
+            this.label5.Location = new System.Drawing.Point(549, 315);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 25);
@@ -117,11 +120,45 @@
             this.rental.Size = new System.Drawing.Size(0, 25);
             this.rental.TabIndex = 52;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.Location = new System.Drawing.Point(497, 355);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 25);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Your estimated price is: ";
+            // 
+            // price
+            // 
+            this.price.AutoSize = true;
+            this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.price.Location = new System.Drawing.Point(723, 355);
+            this.price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(0, 25);
+            this.price.TabIndex = 54;
+            // 
+            // recurance
+            // 
+            this.recurance.AutoSize = true;
+            this.recurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.recurance.Location = new System.Drawing.Point(723, 394);
+            this.recurance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.recurance.Name = "recurance";
+            this.recurance.Size = new System.Drawing.Size(0, 25);
+            this.recurance.TabIndex = 55;
+            // 
             // RentalConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
+            this.Controls.Add(this.recurance);
+            this.Controls.Add(this.price);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.rental);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
@@ -146,5 +183,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label rental;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label price;
+        private System.Windows.Forms.Label recurance;
     }
 }

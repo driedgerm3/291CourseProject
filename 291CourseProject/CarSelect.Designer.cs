@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.rentalLength = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -118,11 +119,23 @@
             this.rentalLength.Size = new System.Drawing.Size(160, 24);
             this.rentalLength.TabIndex = 29;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(16, 142);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(433, 25);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Select an available car and desired rental charge";
+            // 
             // CarSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.rentalLength);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -147,5 +160,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox rentalLength;
+        private System.Windows.Forms.Label label4;
     }
 }

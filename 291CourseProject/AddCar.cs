@@ -22,15 +22,7 @@ namespace _291CourseProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Form oForm in Application.OpenForms)
-            {
-                if (oForm is CarAddDelete)
-                {
-                    oForm.Show();
-                    break;
-                }
-            }
-            this.Close();
+            goBack();
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -54,10 +46,8 @@ namespace _291CourseProject
             }
         }
 
-        private void Car_Added()
+        private void goBack()
         {
-            System.Windows.Forms.MessageBox.Show("A new car has been added.");
-
             foreach (Form oForm in Application.OpenForms)
             {
                 if (oForm is CarAddDelete)
@@ -148,7 +138,8 @@ namespace _291CourseProject
                 belongsToInsertcmd.ExecuteNonQuery();
                 ownsInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                Car_Added();
+                System.Windows.Forms.MessageBox.Show("A new car has been added.");
+                goBack();
 
             }
             catch
