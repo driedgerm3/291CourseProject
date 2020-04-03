@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.rental = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -114,11 +115,23 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form2
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(13, 115);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(507, 25);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Return a vehicle that has been confirmed by an employee";
+            // 
+            // VehicleDropoff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 752);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.rental);
             this.Controls.Add(this.label2);
@@ -126,7 +139,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "VehicleDropoff";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
@@ -143,5 +156,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox rental;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
     }
 }

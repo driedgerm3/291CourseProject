@@ -41,7 +41,7 @@ namespace _291CourseProject
             cnn = new SqlConnection(connetionString);
             cnn.Open();
             //select statement, get car ids
-            SqlCommand command = new SqlCommand("Select * from Car, BelongsTo where Car.Branch_ID = @Branch_ID and Car.Car_ID = BelongsTo.Car_ID", cnn);
+            SqlCommand command = new SqlCommand("Select * from Car, BelongsTo, Pickup where Car.Branch_ID = @Branch_ID and Car.Car_ID = BelongsTo.Car_ID and Pickup.Branch_ID = Car.Branch_ID and Pickup.Rental_ID in (select Rental_ID from Dropoff where Dropoff.Branch_ID = @Branch_ID)", cnn);
             command.Parameters.AddWithValue("@Branch_ID", selectedBranch);
 
             SqlDataReader sqlReader = command.ExecuteReader();
@@ -103,6 +103,8 @@ namespace _291CourseProject
 
             SqlCommand pickupInsertcmd = Pickup_Insert(cnn, Rental_ID);
 
+            int charge = Rental_Charge(cnn, rentalType(), selectedCar);
+
             SqlCommand command = new SqlCommand("Update IDTracker Set Rental_ID = Rental_ID + 1", cnn);
             //try inserts
             try
@@ -112,7 +114,7 @@ namespace _291CourseProject
                 transactionInsertcmd.ExecuteNonQuery();
                 pickupInsertcmd.ExecuteNonQuery();
                 command.ExecuteNonQuery();
-                var form = new RentalConfirmation(Rental_ID);
+                var form = new RentalConfirmation(Rental_ID, charge);
 
                 form.Show();
                 this.Hide();
@@ -161,7 +163,7 @@ namespace _291CourseProject
         private int rentalType()
         {
             string length = rentalLength.Text;
-            if (length.Equals("Weekly"))
+            if (length.Equals("Daily"))
             {
                 return 1;
             }
@@ -173,6 +175,32 @@ namespace _291CourseProject
             {
                 return 3;
             }
+        }
+
+        private int Rental_Charge(SqlConnection cnn, int length, string selectedCar)
+        {
+            int[] charge = { 0 };
+            //select statement, get branch ids
+            SqlCommand command = new SqlCommand("Select * from Car, Car_Type where Car.Type_ID = Car_Type.Type_ID and Car.Car_ID = @Car_ID", cnn);
+            command.Parameters.AddWithValue("@Car_ID", selectedCar);
+            SqlDataReader sqlReader = command.ExecuteReader();
+            while (sqlReader.Read())
+            {
+                if (length == 1)
+                {
+                    charge[0] = (int)sqlReader["Daily_Price"];
+                }
+                else if (length == 2)
+                {
+                    charge[0] = (int)sqlReader["Weekly_Price"];
+                }
+                else
+                {
+                    charge[0] = (int)sqlReader["Monthly_Price"];
+                }
+            }
+            sqlReader.Close();
+            return charge[0];
         }
 
         private SqlCommand Rented_Insert(SqlConnection cnn, int Rental_ID, string selectedCar)
